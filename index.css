@@ -1,0 +1,42 @@
+/*
+Special thanks to this page for reminding me how to do a <link> for heaven's sake, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+
+Because I wanted to understand units I didn't need to know 10 years ago, thanks to, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+*/
+:root {
+  --color: #d2fdff;
+  --color-transparent: #00000022;
+}
+
+::selection {
+  background: var(--color-transparent);
+}
+
+html,
+body {
+  background: var(--color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+}
+
+body {
+  display: table-row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body > div {
+  max-width: 90%;
+}
+body div {
+  margin: 0 3ex;
+  margin-top: 3ex;
+}
+body span .not-as-smoll,
+body div .not-as-smoll {
+  font-size: 95%;
+}
+body span .smoll,
+body div .smoll {
+  font-size: 90%;
+}
