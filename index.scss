@@ -3,47 +3,60 @@ Special thanks to this page for reminding me how to do a <link> for heaven's sak
 
 Because I wanted to understand units I didn't need to know 10 years ago, thanks to, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 */
-:root {
-  --color: #d2fdff;
-  --color-transparent: #00000022;
-}
-
 ::selection {
-  background: var(--color-transparent);
+  background: #0002;
 }
 
 html,
 body {
   background: var(--color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  // font-size: 3vh;
-  font-size: 100%;
+  font-size: 3vmin;
 }
 
 body {
+  --color: #d2fdff;
+  --ye-borders: 0.5vmin dotted black;
+
   display: table-row;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+
+  h1, h2 {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    border-bottom: var(--ye-borders);
+    padding-left: 0.5vmin;
+  }
+
+  h2 {
+    border-top: var(--ye-borders);
+    padding-left: 1vmin;
+  }
 
   > div {
     max-width: 90%;
-    //// visual helper
-    // border-bottom: 1px solid red;
   }
 
   div {
-    margin: 0 3ex;
-    margin-top: 3ex;
+    margin: 0 1vmin;
+    margin-top: 1vmin;
+  }
+  hr {
+    border-top: var(--ye-borders);
   }
 
-  span,
-  div {
+  li{
+    font-size: 0.9rem;
+  }
+
+
     .not-as-smoll {
-      font-size: 95%;
+      font-size: 0.9rem;
     }
     .smoll {
-      font-size: 90%;
+      font-size: 0.7rem;
     }
-  }
 }
