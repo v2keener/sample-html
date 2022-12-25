@@ -11,7 +11,7 @@ html,
 body {
   background: var(--color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 3vmin;
+  font-size: 2.5vmax;
 }
 
 body {
@@ -21,7 +21,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-body h1, body h2 {
+body h1,
+body h2 {
   margin-bottom: 0;
 }
 body h1 {
@@ -49,5 +50,5 @@ body .not-as-smoll {
   font-size: 0.9rem;
 }
 body .smoll {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
