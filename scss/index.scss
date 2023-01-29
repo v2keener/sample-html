@@ -10,11 +10,11 @@ Because I wanted to understand units I didn't need to know 10 years ago, thanks 
   background: #0002;
 }
 
-html,
-body {
+html, body, h1, h2, h3 {
   background: var(--color);
   /* Delafuerza Print was created with Calligraphr, btw */
-  font-family: 'Delafuerza Print', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-basic: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family-basic);
 }
 
 body {
@@ -44,6 +44,7 @@ body {
     max-width: 80vmax;// 80vmin;
     margin: 0 auto;
     margin-top: 1vmin;
+    font-family: 'Delafuerza Print', var(--font-family-basic);
   }
   hr {
     border-top: var(--ye-borders);
@@ -55,6 +56,7 @@ body {
 
   footer {
     font-size: 80%;
+    font-family: var(--font-family-basic);
   }
 
   .not-as-smoll {
