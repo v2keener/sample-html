@@ -4,7 +4,9 @@ Special thanks to this page for reminding me how to do a <link> for heaven's sak
 Because I wanted to understand units I didn't need to know 10 years ago, thanks to, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 */
 
-@import "gdlf-add-dlfprint-font-face";
+@use "gdlf-add-dlfprint-font-face.scss";
+
+@include gdlf-add-dlfprint-font-face.add-classes;
 
 ::selection {
   background: #0002;
