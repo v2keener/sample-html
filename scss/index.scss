@@ -6,6 +6,8 @@ Because I wanted to understand units I didn't need to know 10 years ago, thanks 
 
 @use "gdlf-add-dlfprint-font-face.scss";
 
+/* more convenient to do this as a mixin and 
+it offers more flexibility */
 @include gdlf-add-dlfprint-font-face.add-classes;
 
 ::selection {
