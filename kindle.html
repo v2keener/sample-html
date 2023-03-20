@@ -13,6 +13,11 @@
       overflow: hidden;
     }
 
+    div{
+      display: block;
+      float: none;
+    }
+
     /* form{
       position:fixed;
       top: 1ex;
@@ -28,19 +33,19 @@
       /* margin-left: calc(1 / var(--scale-for-iframe) * 40vw); */
       /* margin-top: calc(1 / var(--scale-for-iframe) * 35vw); */
       /* height: calc(97% / var(--scale-for-iframe)); */
-      height: 95%;
+      height: 80%;
       /* width: calc(100% / var(--scale-for-iframe)); */
       width: 100%;
       /* border: none; */
       border: 1px solid black;
-      position: fixed;
+      /* position: fixed; */
       top: var(--iframe-top);
-      left: 0;
+      /* left: 0; */
     }
   </style>
 </head>
 <body>
-  <div style="position: fixed; width: 100% /*top: 1vh;*/">
+  <div>
     <input id="gdlfURL" title="HTTP links will not work! HTTPS only!" type="text" value="https://vidadelafuerza.com" />
     <button onclick="goWithIframe()">Go!</button>
     Width:<span id="viewportWidth"></span> Height:<span id="viewportHeight"></span>
