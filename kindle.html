@@ -1,15 +1,17 @@
 <html>
 
 <head>
-  <meta name="viewport" content="height=758, initial-scale=1" />
+  <meta name="viewport" content="height=758, initial-scale=0.5" />
   <style>
-    :root{
+    :root {
       --iframe-top: 8vh;
     }
+
     body {
       overflow: scroll;
       overflow: hidden;
     }
+
     /* form{
       position:fixed;
       top: 1ex;
@@ -25,7 +27,8 @@
       margin-left: calc(1 / var(--scale-for-iframe) * 10%);
       margin-top: calc(1 / var(--scale-for-iframe) * 15%);
       height: calc(97% / var(--scale-for-iframe));
-      width: calc(100% / var(--scale-for-iframe));
+      /* width: calc(100% / var(--scale-for-iframe)); */
+      width: 100%;
       border: none;
       position: fixed;
       top: var(--iframe-top);
@@ -39,9 +42,10 @@
   The years shown for this are 2012 for the Paperwhite (758)
   ...and 2010 for the Kindle 3 (600)
  -->
+
 <body>
   <div style="position: fixed; top: 1vh;">
-    <input id="gdlfURL" title="HTTP links will not work! HTTPS only!" type="text" value="https://vidadelafuerza.com"/>
+    <input id="gdlfURL" title="HTTP links will not work! HTTPS only!" type="text" value="https://vidadelafuerza.com" />
     <button onclick="goWithIframe()">Go!</button>
     Width:<span id="viewportWidth"></span> Height:<span id="viewportHeight"></span>
   </div>
@@ -50,23 +54,26 @@
     const inURL = document.getElementById('gdlfURL');
     const iFrame = document.getElementById('gdlfIFrame');
     inURL.addEventListener("keyup", inputOnKeyUp);
-      
-    function inputOnKeyUp(e){
-      if (e.code === "Enter" || e.keyCode === 13){
+
+    function inputOnKeyUp(e) {
+      if (e.code === "Enter" || e.keyCode === 13) {
         goWithIframe();
       }
     }
-    function goWithIframe(){
+    function goWithIframe() {
       var actualURL = inURL.value;
       // if "http" or "https" is missing, prepend "https://" to actualURL
-      if (!actualURL.match(/^(http|https)/)){
+      if (!actualURL.match(/^(http|https)/)) {
         actualURL = "https://" + actualURL
       }
       iFrame.src = actualURL;
     }
-
-    document.getElementById('viewportHeight').innerHTML = window.innerHeight;
-    document.getElementById('viewportWidth').innerHTML = window.innerWidth;
+    /* following don't work for Kindle Paperwhite 11th gen
+    window.innerHeight;
+    window.innerWidth;
+    */
+    document.getElementById('viewportHeight').innerHTML = document.documentElement.clientWidth;
+    document.getElementById('viewportWidth').innerHTML = document.documentElement.clientHeight;
   </script>
 </body>
 
