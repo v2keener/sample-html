@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      overflow: scroll;
+      overflow: hidden;
+    }
+    form{
+      position:fixed;
+      top: 1ex;
+      left: 1ex;
+    }
+    input {
+      width: 50ex;
+    }
+
+    iframe {
+      --scale-for-iframe: 1.2;
+      transform: scale(var(--scale-for-iframe), var(--scale-for-iframe));
+      margin-left: calc(1 / var(--scale-for-iframe) * 10%);
+      margin-top: calc(1 / var(--scale-for-iframe) * 15%);
+      height: calc(97% / var(--scale-for-iframe));
+      width: calc(100% / var(--scale-for-iframe));
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <input id="gdlfURL" type="text" value="http://vidadelafuerza.com"/>
+    <button onclick="goWithIframe()">Go!</button>
+  </div>
+  <iframe id="gdlfIFrame" title="Enlarged web page" src="http://vidadelafuerza.com"></iframe>
+  <script lang="javascript">
+    const inURL = document.getElementById('gdlfURL');
+    const iFrame = document.getElementById('gdlfIFrame');
+    inURL.addEventListener("keyup", inputOnKeyUp);
+      
+    function inputOnKeyUp(e){
+      if (e.code === "Enter" || e.keyCode === 13){
+        goWithIframe();
+      }
+    }
+    function goWithIframe(){
+      var actualURL = inURL.value;
+      // if "http" or "https" is missing, prepend "https://" to actualURL
+      if (!actualURL.match(/^(http|https)/)){
+        actualURL = "https://" + actualURL
+      }
+      iFrame.src = actualURL;
+    }
+  </script>
+</body>
+
+</html>
