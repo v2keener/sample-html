@@ -1,10 +1,11 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=1468, height=1236, initial-scale=1" />
+  <!-- <meta name="viewport" content="width=1468, height=1236, initial-scale=0.5" /> -->
+  <meta name="viewport" content="initial-scale=2.0" />
   <style>
     :root {
-      --iframe-top: 8vh;
+      --iframe-top: 4vh;
     }
 
     body {
@@ -18,14 +19,14 @@
       left: 1ex;
     } */
     input {
-      width: 70vw;
+      width: 40vw;
     }
 
     iframe {
-      --scale-for-iframe: 2.8;
-      transform: scale(var(--scale-for-iframe), var(--scale-for-iframe));
-      margin-left: calc(1 / var(--scale-for-iframe) * 40vw);
-      margin-top: calc(1 / var(--scale-for-iframe) * 35vw);
+      /* --scale-for-iframe: 2.8; */
+      /* transform: scale(var(--scale-for-iframe), var(--scale-for-iframe)); */
+      /* margin-left: calc(1 / var(--scale-for-iframe) * 40vw); */
+      /* margin-top: calc(1 / var(--scale-for-iframe) * 35vw); */
       /* height: calc(97% / var(--scale-for-iframe)); */
       height: 95vh;
       /* width: calc(100% / var(--scale-for-iframe)); */
@@ -33,17 +34,10 @@
       border: none;
       position: fixed;
       top: var(--iframe-top);
-      left: 0;
+      /* left: 0; */
     }
   </style>
-
 </head>
-<!-- 
-  Kindle Viewport size is either 600 or 758 according to https://viewportsizes.com/?filter=kindle
-  The years shown for this are 2012 for the Paperwhite (758)
-  ...and 2010 for the Kindle 3 (600)
- -->
-
 <body>
   <div style="position: fixed; top: 1vh;">
     <input id="gdlfURL" title="HTTP links will not work! HTTPS only!" type="text" value="https://vidadelafuerza.com" />
