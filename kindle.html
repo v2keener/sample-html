@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Kindle Paperwhite iFrame Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <meta name="viewport" content="width=1468, height=1236, initial-scale=0.5" /> -->
   <!-- Kindle Paperwhite 11th Gen browser doesn't appear to honor the initial-scale -->
   <!-- <meta name="viewport" content="initial-scale=2.0" /> -->
@@ -45,6 +48,20 @@
     }
   </style>
 </head>
+<!-- 
+  It seems that code like this:
+    `document.getElementsByTagName('iframe')[0].contentDocument.getElementsByTagName('body')[0].style.fontSize = '2em';`
+  could *perhaps* do what I want, which is to make a page display more nicely in 
+  my Kindle web browser. The fact that Kindle doesn't allow for a user stylesheet
+  seems rather ridiculous and anti-ADA to me.
+
+  The above code was tested on Windows 11 with MS Edge. Even without having the 
+  Animation API implemented, it is supposed that Kindle Web Browser could at 
+  least handle a style declaration for an iframe via JavaScript. This however
+  would be likely to mess up some websites, so it's not an ideal solution.
+   
+  An ideal solution would have the page display as if I were on my iPhone.
+ -->
 <body>
   <div>
     <input id="gdlfURL" title="HTTP links will not work! HTTPS only!" type="text" value="https://vidadelafuerza.com" />
