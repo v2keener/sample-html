@@ -41,11 +41,12 @@ body h3 {
   border-top: var(--ye-borders);
   padding-left: 1vmin;
 }
-body div {
+body div.gdlf-print {
   max-width: 80vmax;
   margin: 0 auto;
   margin-top: 1vmin;
   font-family: "Delafuerza Print", var(--font-family-basic);
+  font-size: 120%;
 }
 body hr {
   border-top: var(--ye-borders);
