@@ -33,37 +33,54 @@ html, body, h1, h2, h3 {
 body {
   /*--color: hsla(200, 88%, 81%, 80%);*/
   --color: var(--sky-blue);
-  --ye-borders: 0.5vmin dotted var(--lapis);
   max-width: 28em;
   padding: 0 1em;
   margin: 0 auto;
+  font-size: 110%;
+}
+code{
+  font-size: 120%;
+  padding: 0 0.2ex;
+  background-color: var(--grey-blue);
 }
 body h1, body h2, body h3 {
   margin-bottom: 0;
-  /*background-image: linear-gradient(rgba(85, 207, 231, 0.229), rgba(203, 60, 211, 0.3)), url("../images/diag-blue-red-background-tile.png");*/
-  background: linear-gradient(var(--lapis), var(--grey-blue),var(--grey-blue), var(--sunset-blue), var(--lapis));
-  /*background-repeat: repeat;*/
+  background: linear-gradient(to bottom, var(--lapis) 10%, var(--grey-blue) 15%, var(--sky-blue) 30%, var(--sunset-blue) 90%, var(--lapis) 100%);
+  border-left: 0.5ex solid;
+  border-radius: 0.6ex;
+  border-image: linear-gradient(to bottom, var(--lapis) 10%, var(--grey-blue) 15%, var(--sky-blue) 30%, var(--sunset-blue) 90%, var(--lapis) 100%);
+  padding: 0.2ex;
+  /* other font-family settings for headers that look OK, imo */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 body h1, body h2 {
-  /* border-bottom: var(--ye-borders); */
   padding-left: 0.5vmin;
 }
 body h3 {
-  /* border-top: var(--ye-borders); */
   padding-left: 1vmin;
 }
-body div.gdlf-print {
-  max-width: 80vmax;
-  margin: 0 auto;
-  margin-top: 1vmin;
+.gdlf-print {
   font-family: "Delafuerza Print", var(--font-family-basic);
-  font-size: 120%;
+}
+a {
+  color: var(--lapis);
+  text-decoration-color: var(--sunset-blue);
+  text-decoration-thickness: 0.3ex;
+  text-decoration-style: dashed;
 }
 body hr {
-  border-top: var(--ye-borders);
+  border-top: 0.5vmin solid var(--lapis);
 }
 body li {
-  font-size: 95%;
+  margin-left: -1ex;
+  padding-top: 0.3ex;
+}
+div.container > ul > li {
+  margin-top: 0.7ex;
+  border-top: 0.3ex solid;
+  border-image: linear-gradient(to right, var(--grey-blue) 20%, var(--sky-blue) 95%) 1;/*var(--grey-blue) 90%, var(--sky-blue) 90%);*/
 }
 body footer {
   font-size: 80%;
@@ -74,4 +91,23 @@ body .not-as-smoll {
 }
 body .smoll {
   font-size: 0.8rem;
+}
+
+div {
+  margin-top: 1ex;
+}
+
+@keyframes subtle-flasher {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.65;
+  }
 }
