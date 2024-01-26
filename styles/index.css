@@ -29,6 +29,9 @@ html, body, h1, h2, h3 {
   --font-family-basic: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: var(--font-family-basic);
 }
+h1 {
+  text-align: center;
+}
 
 body {
   /*--color: hsla(200, 88%, 81%, 80%);*/
@@ -81,6 +84,22 @@ div.container > ul > li {
   margin-top: 0.7ex;
   border-top: 0.3ex solid;
   border-image: linear-gradient(to right, var(--grey-blue) 20%, var(--sky-blue) 95%) 1;/*var(--grey-blue) 90%, var(--sky-blue) 90%);*/
+}
+div.profile-pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.profile-pic {
+  background: none;
+  background-image: url(../images/large-blue-shirt-profile-pic.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10em;
+  height: 10em;
+  border: 0.7ex solid var(--grey-blue);
+  border-radius: 0.9ex;
 }
 body footer {
   font-size: 80%;
