@@ -29,7 +29,7 @@ html, body, h1, h2, h3 {
   --font-family-basic: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: var(--font-family-basic);
 }
-h1 {
+h1, h2 {
   text-align: center;
 }
 
