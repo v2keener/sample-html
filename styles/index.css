@@ -108,11 +108,11 @@ body footer {
   font-size: 80%;
   font-family: var(--font-family-basic);
 }
-body .not-as-smoll {
-  font-size: 90%;
-}
 body .smoll {
-  font-size: 0.8rem;
+  font-size: 80%;
+}
+div.smoll ul {
+  margin-top: 0;
 }
 
 div {
