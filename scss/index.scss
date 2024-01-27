@@ -1,72 +1,191 @@
 /*
-Special thanks to this page for reminding me how to do a <link> for heaven's sake, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
 
-Because I wanted to understand units I didn't need to know 10 years ago, thanks to, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+*** DO NOT EDIT index.css directly ***
+
+index.css is rendered from ../scss/index.scss using ../interpret-scss.ps1
+
 */
-
 @use "gdlf-add-dlfprint-font-face.scss";
 
-/* more convenient to do this as a mixin and 
-it offers more flexibility */
+// more convenient to do this as a mixin function and
+// it offers more flexibility (in case I want to change it up with the
+// add-classes method)
+/* my own custom @font-face*/
 @include gdlf-add-dlfprint-font-face.add-classes;
 
 ::selection {
   background: #0002;
 }
 
-html, body, h1, h2, h3 {
+:root {
+  --sky-blue: hsl(200, 87%, 85%);
+  --grey-blue: hsl(198, 63%, 67%);
+  --sunset-blue: hsl(202, 61%, 54%);
+  --lapis: hsl(240, 57%, 32%);
+  --indigo: hsl(248, 92%, 25%);
+}
+
+html,
+body,
+h1,
+h2,
+h3 {
   background: var(--color);
   /* Delafuerza Print was created with Calligraphr, btw */
   --font-family-basic: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: var(--font-family-basic);
 }
+h1,
+h2 {
+  text-align: center;
+}
 
 body {
-  --color: hsla(200, 88%, 81%, 80%);
-  --ye-borders: 0.5vmin dotted black;
+  --color: var(--sky-blue);
   max-width: 28em;
   padding: 0 1em;
   margin: 0 auto;
+  font-size: 110%;
 
-  h1, h2, h3 {
-    margin-bottom: 0;
-    background-image: linear-gradient(hsla(190, 75%, 62%, 0.229),hsla(297, 63%, 53%, 0.3)), url("../images/diag-blue-red-background-tile.png");
-    background-repeat: repeat;
+  code {
+    --border-radius: 0.7ex;
+    --border-left-right: var(--border-radius) solid var(--grey-blue);
+    font-size: 120%;
+    background-color: var(--grey-blue);
+    border-left: var(--border-left-right);
+    border-right: var(--border-left-right);
+    border-radius: var(--border-radius);
   }
 
-  h1, h2 {
-    border-bottom: var(--ye-borders);
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--lapis) 10%,
+      var(--grey-blue) 15%,
+      var(--sky-blue) 30%,
+      var(--sunset-blue) 90%,
+      var(--lapis) 100%
+    );
+    border-left: 0.5ex solid;
+    border-radius: 0.6ex;
+    border-image: linear-gradient(
+      to bottom,
+      var(--lapis) 10%,
+      var(--grey-blue) 15%,
+      var(--sky-blue) 30%,
+      var(--sunset-blue) 90%,
+      var(--lapis) 100%
+    );
+    padding: 0.2ex;
+    /* other font-family settings for headers that look OK, imo */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+
+  h1,
+  h2 {
     padding-left: 0.5vmin;
   }
 
   h3 {
-    border-top: var(--ye-borders);
     padding-left: 1vmin;
   }
-
+  .gdlf-print {
+    font-family: "Delafuerza Print", var(--font-family-basic);
+  }
+  a {
+    color: var(--lapis);
+    text-decoration-color: var(--sunset-blue);
+    text-decoration-thickness: 0.3ex;
+    text-decoration-style: dashed;
+  }
   div {
-    max-width: 80vmax;// 80vmin;
-    margin: 0 auto;
-    margin-top: 1vmin;
-    font-family: 'Delafuerza Print', var(--font-family-basic);
+    // max-width: 80vmax; // 80vmin;
+    // margin: 0 auto;
+    margin-top: 1ex;
+    // font-family: "Delafuerza Print", var(--font-family-basic);
+
+    .menu {
+      display: flex;
+    }
+    .active-part {
+      background-color: var(--grey-blue);
+    }
+    .about,
+    .projects {
+      cursor: pointer;
+      margin-right: 1ex;
+      padding: 0.5ex;
+      border: 0.5ex solid var(--lapis);
+      border-radius: 0.5ex;
+    }
+
+    .container-part {
+      color: inherit;
+    }
+
+    /*
+    div.menu
+    div.menu.active-part 
+    div.container-part
+    */
   }
   hr {
-    border-top: var(--ye-borders);
+    border-top: 0.5vmin solid var(--lapis);
   }
 
   li {
-    font-size: 85%;
+    margin-left: -1ex;
+    padding-top: 0.3ex;
   }
-
+  div.container > ul > li {
+    margin-top: 0.7ex;
+    border-top: 0.3ex solid;
+    border-image: linear-gradient(to right, var(--grey-blue) 20%, var(--sky-blue) 95%) 1; /*var(--grey-blue) 90%, var(--sky-blue) 90%);*/
+  }
+  div.profile-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.profile-pic {
+    background: none;
+    background-image: url(../images/large-blue-shirt-profile-pic.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10em;
+    height: 10em;
+    border: 0.7ex solid var(--grey-blue);
+    border-radius: 0.9ex;
+  }
   footer {
     font-size: 80%;
     font-family: var(--font-family-basic);
   }
 
-  .not-as-smoll {
-    font-size: 90%;
-  }
   .smoll {
-    font-size: 0.8rem;
+    font-size: 80%;
+  }
+  div.smoll ul {
+    margin-top: 0;
+  }
+  @keyframes subtle-flasher {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    60% {
+      opacity: 0.9;
+    }
+    70% {
+      opacity: 0.65;
+    }
   }
 }

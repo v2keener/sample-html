@@ -2,6 +2,8 @@
 
 This project is forked from the original DigitalOcean project for my own langing page and website at [vidadelafuerza.com](https://vidadelafuerza.com). Let me know what you think. (The site is not meant to 100% follow best practices, but more as a tool for experimentation and learning.)
 
+For testing, I use `light-server -s .`.
+
 ## Getting Started
 
 We provide a sample app using HTML that you can deploy on App Platform. These steps will get this sample application running for you using App Platform.
