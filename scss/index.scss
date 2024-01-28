@@ -111,18 +111,25 @@ body {
 
     .menu {
       display: flex;
+      .button {
+        cursor: pointer;
+        margin-right: 1ex;
+        padding: 0.5ex;
+        border: 0.5ex solid var(--lapis);
+        border-radius: 0.5ex;
+      }
     }
     .active-part {
       background-color: var(--grey-blue);
     }
-    .about,
+    /*.about,
     .projects {
       cursor: pointer;
       margin-right: 1ex;
       padding: 0.5ex;
       border: 0.5ex solid var(--lapis);
       border-radius: 0.5ex;
-    }
+    }*/
 
     .container-part {
       color: inherit;

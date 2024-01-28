@@ -87,6 +87,14 @@ body a {
 }
 body div {
   margin-top: 1ex;
+  /*.about,
+  .projects {
+    cursor: pointer;
+    margin-right: 1ex;
+    padding: 0.5ex;
+    border: 0.5ex solid var(--lapis);
+    border-radius: 0.5ex;
+  }*/
   /*
   div.menu
   div.menu.active-part 
@@ -96,16 +104,15 @@ body div {
 body div .menu {
   display: flex;
 }
-body div .active-part {
-  background-color: var(--grey-blue);
-}
-body div .about,
-body div .projects {
+body div .menu .button {
   cursor: pointer;
   margin-right: 1ex;
   padding: 0.5ex;
   border: 0.5ex solid var(--lapis);
   border-radius: 0.5ex;
+}
+body div .active-part {
+  background-color: var(--grey-blue);
 }
 body div .container-part {
   color: inherit;

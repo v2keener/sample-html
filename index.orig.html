@@ -17,26 +17,23 @@
   <script type="text/javascript">
     async function changePart(el) {
       //const url = document.location.href.replace('index.html','') + "parts/" + el.className.match(/about|projects/)[0] + ".part.html";
-      var activeClassName = null;
-      var ignoreRegex = /button|active-part/;
-      for(var i = 0; i < el.classList.length; i++){
-        if(!el.classList[i].match(ignoreRegex)){
-          activeClassName = el.classList[i];
-        }
-      }
-      //const url = "/json/" + el.className.match(/about|projects|fooboo/)[0] + ".part.json";
-      const url = "/json/" + activeClassName + ".part.json";
+      const url = "/json/" + el.className.match(/about|projects/)[0] + ".part.json";
       const response = await fetch(url);
       const part = await response.json();
       var x = ''; for (var i in part.html) {
         x += part.html[i];
       }
-      document.querySelectorAll('div.button.active-part').forEach(el => {
+      document.querySelectorAll('div.projects, div.about').forEach(el => {
         el.classList.remove('active-part');
       });
       el.classList.add('active-part');
       document.querySelector('div.container-part').innerHTML = x;
     }
+
+    // window.setTimeout(function () {
+    //   var aboutPart = document.querySelector('div.about');
+    //   changePart(aboutPart);
+    // }, 1);
   </script>
 </head>
 
@@ -53,123 +50,19 @@
         &nbsp;</div>
     </div>
     <div class="menu">
-      <div class="button about active-part" onclick="changePart(this);">
+      <div class="about active-part" onclick="changePart(this);">
         About
       </div>
-      <div class="button projects" onclick="changePart(this);">
+      <div class="projects" onclick="changePart(this);">
         Projects
       </div>
-      <!-- Example of adding a button:
-      <div class="button fooboo" onclick="changePart(this);">
-        Fooboo
-      </div> -->
     </div>
     <hr>
     <div class="container-part">
       <!--the following PARTS are for screen reader and/or `lynx` (app) compatibility-->
-      <!--ABOUT.PART--><!-- This ABOUT.PART part included automatically DO NOT EDIT in index.html -->
-<div>
-  <b>I live and work from home in Morgantown, West Virginia, USA</b> for a local company, <a
-    href="https://wvnet.edu/">WVNET</a>.
-</div>
-<div>
-  My work involves advanced technical support of hosted <a href="https://www.ellucian.com/solutions/ellucian-banner"
-    target="_blank">Ellucian Banner</a> web software for business customers. Often,
-  this means <a href="https://docs.oracle.com/en/database/oracle/oracle-database/" target="_blank"
-    title="Visit Oracle Database documentation">Oracle DB</a> administration.
-</div>
-<div>
-  Banner is a complex enterprise resource planning (<a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning"
-    target="_blank">ERP</a>)
-  software, so all departments of WVNET are involved in its maintenance and support. There are integrations to
-  establish and maintain, some public presentations, and a lot of learning.
-</div>
-<div>
-  Also: I am an avid <code>bash</code> and <code>PowerShell</code> scripting advocate and software developer. As an
-  engineer, I never stop learning.
-</div>
-<div>
-  <span style="font-weight: 500;">🎯 Currently, I am open to other opportunities.</span> My family is growing and my
-  income needs to grow
-  proportionately.
-</div>
-<div>
-  <span style="font-weight:700; animation: subtle-flasher 2400ms infinite;">🌟 Please reach out to me at <a
-      id="gotolinkedin" href="https://www.linkedin.com/in/gustavodelafuerza/" target="_blank">LinkedIn</a></span> if
-  you're interested in what I have to offer.
-</div>
-<hr>
-<div class="smoll">
-  <b>Social Media:</b>
-  <ul>
-    <li>LinkedIn - <a href="https://www.linkedin.com/in/gustavodelafuerza/" target="_blank">Gustavo (Keener)
-        DeLaFuerza</a></li>
-    <li>Tumblr - <a href="https://www.tumblr.com/vidadelafuerza" target="_blank">Deviled Tech (blog)</a></li>
-    <li>Mastodon via <a href="https://hachyderm.io/explore" target="_blank">Hachderm.io</a> - <a
-        href="https://hachyderm.io/@gdlf" target="_blank">Gustavo 👾🌈🎯🎉 (@gdlf@hachyderm.io)</a></li>
-  </ul>
-</div>
-<!-- END ABOUT.PART part included automatically DO NOT EDIT in index.html -->
-
+      <!--ABOUT.PART-->
       <div style="display:none">
-      <!--PROJECTS.PART--><!-- This PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
-<ul>
-  <li><b>vidadelafuerza.com:</b> This website is in "vanilla" HTML and CSS. It is designed and organized to be
-    accessible, easy to read, and compatible with mobile browsers. (<a href="https://github.com/v2keener/sample-html"
-      target="_blank">Visit the source on Github</a>)
-  </li>
-  <li>
-    <b>Obsidian notetaking:</b> Special thanks to <a href="https://dynalist.io/" target="_blank"
-      title="Visit dynalist.io">Dynalist</a> for offering Obsidian! I use it for all of my notes. Those notes are
-    CLI-searchable and also able to be manipulated with tools like <code>grep</code>, <code>awk</code>, and
-    <code>sed</code>.
-    <ul>
-      <li>
-        Obsidian.md note-taking is pretty great 💖, especially if you like managing your notes in
-        Markdown.
-      </li>
-      <li>
-        Visit <a href="https://obsidian.md" target="_blank">Obsidian.md's site</a> for more info.
-      </li>
-    </ul>
-  </li>
-  <li>
-    <b><a href="https://github.com/v2keener/gdlf-overlay" target="_blank">Obsidian Overlay</a> project:</b>
-    A project I've published is called "Overlay", and it takes <a href="https://github.com/kepano" target="_blank"
-      title="Stephan Ango">@kepano</a>'s default Obsidian theme and
-    merely adds a few extra things (rather than being an entire, fresh Obsidian Theme). Check it out
-    <a href="https://github.com/v2keener/gdlf-overlay" target="_blank">on Github</a>.
-    <ul>
-      <li>Sidebar: My CV is exported to PDF with Obsidian using my custom Overlay theme and a
-        <code>media-print.css</code>
-        Snippet I created to make it print nicely. (CV available upon request. <em>LinkedIn is the best way to
-          contact me.)</em>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <b><em>Delafuerza Print</em> OpenType font project:</b> <span class="gdlf-print">This text is in "Delafuerza
-      Print",
-      which I created with <a href="https://www.calligraphr.com/en/" target="_blank"
-        title="Visit Calligraphr's website">Calligraphr</a>, <a href="https://inkscape.org/" target="_blank"
-        title="visit Inkscape's website">Inkscape</a>, and
-      a Wacom tablet. Here's how that worked:</span>
-    <ul>
-      <li><b>Calligraphr</b> was used to
-        <ul>
-          <li>a) download PDF templates to fill out with Inkscape, and</li>
-          <li>b) upload those hand-written PDFs for Calligraphr to parse them into the
-            <b>Delafuerza Print</b> font.
-          </li>
-        </ul>
-      </li>
-      <li><b>Inkscape</b> was used with a Wacom writing tablet to fill in PDF templates for Calligraphr.</li>
-    </ul>
-  </li>
-</ul>
-<!-- END PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
-<!-- example of adding a part - for it to work, /parts/fooboo.part.html needs to exist -->
-      <!--FOOBOO.PART-->
+      <!--PROJECTS.PART-->
       </div>
     </div>
     <hr>
@@ -190,13 +83,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
