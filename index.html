@@ -18,7 +18,7 @@
     async function changePart(el) {
       //const url = document.location.href.replace('index.html','') + "parts/" + el.className.match(/about|projects/)[0] + ".part.html";
       var activeClassName = null;
-      var ignoreRegex = /button|active-part/;
+      var ignoreRegex = /active-part/;
       for(var i = 0; i < el.classList.length; i++){
         if(!el.classList[i].match(ignoreRegex)){
           activeClassName = el.classList[i];
@@ -31,7 +31,7 @@
       var x = ''; for (var i in part.html) {
         x += part.html[i];
       }
-      document.querySelectorAll('div.button.active-part').forEach(el => {
+      document.querySelectorAll('button.active-part').forEach(el => {
         el.classList.remove('active-part');
       });
       el.classList.add('active-part');
@@ -53,16 +53,16 @@
         &nbsp;</div>
     </div>
     <div class="menu">
-      <div class="button about active-part" onclick="changePart(this);">
+      <button class="about active-part" onclick="changePart(this);">
         About
-      </div>
-      <div class="button projects" onclick="changePart(this);">
+      </button>
+      <button class="projects" onclick="changePart(this);">
         Projects
-      </div>
+      </button>
       <!-- Example of adding a button:
-      <div class="button fooboo" onclick="changePart(this);">
+      <button class="button fooboo" onclick="changePart(this);">
         Fooboo
-      </div> -->
+      </button> -->
     </div>
     <hr>
     <div class="container-part">

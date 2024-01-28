@@ -101,15 +101,19 @@ body div {
   div.container-part
   */
 }
+body div button {
+  background-color: transparent;
+}
 body div .menu {
   display: flex;
 }
-body div .menu .button {
+body div .menu button {
   cursor: pointer;
   margin-right: 1ex;
   padding: 0.5ex;
   border: 0.5ex solid var(--lapis);
   border-radius: 0.5ex;
+  font-size: 1em;
 }
 body div .active-part {
   background-color: var(--grey-blue);
