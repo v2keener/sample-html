@@ -19,8 +19,8 @@
       //const url = document.location.href.replace('index.html','') + "parts/" + el.className.match(/about|projects/)[0] + ".part.html";
       var activeClassName = null;
       var ignoreRegex = /active-part/;
-      for(var i = 0; i < el.classList.length; i++){
-        if(!el.classList[i].match(ignoreRegex)){
+      for (var i = 0; i < el.classList.length; i++) {
+        if (!el.classList[i].match(ignoreRegex)) {
           activeClassName = el.classList[i];
         }
       }
@@ -101,99 +101,106 @@
       id="gotolinkedin" href="https://www.linkedin.com/in/gustavodelafuerza/" target="_blank">LinkedIn</a></span> if
   you're interested in what I have to offer.
 </div>
-<hr>
-<div class="smoll">
-  <b>Social Media:</b>
-  <ul>
-    <li>LinkedIn - <a href="https://www.linkedin.com/in/gustavodelafuerza/" target="_blank">Gustavo (Keener)
-        DeLaFuerza</a></li>
-    <li>Tumblr - <a href="https://www.tumblr.com/vidadelafuerza" target="_blank">Deviled Tech (blog)</a></li>
-    <li>Mastodon via <a href="https://hachyderm.io/explore" target="_blank">Hachderm.io</a> - <a
-        href="https://hachyderm.io/@gdlf" target="_blank">Gustavo 👾🌈🎯🎉 (@gdlf@hachyderm.io)</a></li>
-  </ul>
-</div>
 <!-- END ABOUT.PART part included automatically DO NOT EDIT in index.html -->
 
       <div style="display:none">
-      <!--PROJECTS.PART--><!-- This PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
-<div style="display:none">
-  Projects
-</div>
-<div>
-  All of these projects are for learning and fun. It is my nature to engineer things, and I do my best to follow best practices. 
-</div>
-<ul>
-  <li><b>vidadelafuerza.com:</b> This website is in "vanilla" HTML and CSS. It is designed and organized to be
-    accessible, easy to read, and compatible with mobile browsers. Feel free to (<a href="https://github.com/v2keener/sample-html"
-      target="_blank">visit the source on Github</a>). Following are some special things about this site:
-      <ul>
-        <li>Development environment is powered by PowerShell, NodeJS, Neovim, Visual Studio Code, and Windows Terminal</li>
-        <li>Testing with <code>lynx</code> is via Windows Subsystem for Linux (WSL) and Oracle Enterprise Linux 9 (OEL9 / RHEL9)</li>
-        <li>The source is based on and forked from DigitalOcean's default "simple-html" template site</li>
-        <li>SCSS is used to interpret the CSS, and both this "Projects" section and the "About" section (and any further sections I might add) are based on "parts" and a number of background PowerShell jobs</li>
-        <li>As of 2024 01 28, this is my favorite project, because I'm not running out of interesting things to learn or try</li>
-      </ul>
-  </li>
-  <li>
-    <b>Obsidian notetaking:</b> Special thanks to <a href="https://dynalist.io/" target="_blank"
-      title="Visit dynalist.io">Dynalist</a> for offering Obsidian! I use it for all of my notes. Those notes are
-    CLI-searchable and also able to be manipulated with tools like <code>grep</code>, <code>awk</code>, and
-    <code>sed</code>.
-    <ul>
-      <li>
-        Obsidian.md note-taking is pretty great 💖, especially if you like managing your notes in
-        Markdown.
-      </li>
-      <li>
-        Visit <a href="https://obsidian.md" target="_blank">Obsidian.md's site</a> for more info.
-      </li>
-    </ul>
-  </li>
-  <li>
-    <b><a href="https://github.com/v2keener/gdlf-overlay" target="_blank">Obsidian Overlay</a> project:</b>
-    A project I've published is called "Overlay", and it takes <a href="https://github.com/kepano" target="_blank"
-      title="Stephan Ango">@kepano</a>'s default Obsidian theme and
-    merely adds a few extra things (rather than being an entire, fresh Obsidian Theme). Check it out
-    <a href="https://github.com/v2keener/gdlf-overlay" target="_blank">on Github</a>.
-    <ul>
-      <li>Sidebar: My CV is exported to PDF with Obsidian using my custom Overlay theme and a
-        <code>media-print.css</code>
-        Snippet I created to make it print nicely. (CV available upon request. <em>LinkedIn is the best way to
-          contact me.)</em>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <b><em>Delafuerza Print</em> OpenType font project:</b> <span class="gdlf-print">This text is in "Delafuerza
-      Print",
-      which I created with <a href="https://www.calligraphr.com/en/" target="_blank"
-        title="Visit Calligraphr's website">Calligraphr</a>, <a href="https://inkscape.org/" target="_blank"
-        title="visit Inkscape's website">Inkscape</a>, and
-      a Wacom tablet. Here's how that worked:</span>
-    <ul>
-      <li><b>Calligraphr</b> was used to
+        <!--PROJECTS.PART--><!-- This PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
+        <div style="display:none">
+          Projects
+        </div>
+        <div>
+          All of these projects are for learning and fun. It is my nature to engineer things, and I do my best to follow
+          best practices.
+        </div>
         <ul>
-          <li>a) download PDF templates to fill out with Inkscape, and</li>
-          <li>b) upload those hand-written PDFs for Calligraphr to parse them into the
-            <b>Delafuerza Print</b> font.
+          <li><b>vidadelafuerza.com:</b> This website is in "vanilla" HTML and CSS. It is designed and organized to be
+            accessible, easy to read, and compatible with mobile browsers. Feel free to (<a
+              href="https://github.com/v2keener/sample-html" target="_blank">visit the source on Github</a>). Following
+            are some special things about this site:
+            <ul>
+              <li>Development environment is powered by PowerShell, NodeJS, Neovim, Visual Studio Code, and Windows
+                Terminal</li>
+              <li>Testing with <code>lynx</code> is via Windows Subsystem for Linux (WSL) and Oracle Enterprise Linux 9
+                (OEL9 / RHEL9)</li>
+              <li>The source is based on and forked from DigitalOcean's default "simple-html" template site</li>
+              <li>SCSS is used to interpret the CSS, and both this "Projects" section and the "About" section (and any
+                further sections I might add) are based on "parts" and a number of background PowerShell jobs</li>
+              <li>As of 2024 01 28, this is my favorite project, because I'm not running out of interesting things to
+                learn or try</li>
+            </ul>
+          </li>
+          <li>
+            <b>Obsidian notetaking:</b> Special thanks to <a href="https://dynalist.io/" target="_blank"
+              title="Visit dynalist.io">Dynalist</a> for offering Obsidian! I use it for all of my notes. Those notes
+            are
+            CLI-searchable and also able to be manipulated with tools like <code>grep</code>, <code>awk</code>, and
+            <code>sed</code>.
+            <ul>
+              <li>
+                Obsidian.md note-taking is pretty great 💖, especially if you like managing your notes in
+                Markdown.
+              </li>
+              <li>
+                Visit <a href="https://obsidian.md" target="_blank">Obsidian.md's site</a> for more info.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b><a href="https://github.com/v2keener/gdlf-overlay" target="_blank">Obsidian Overlay</a> project:</b>
+            A project I've published is called "Overlay", and it takes <a href="https://github.com/kepano"
+              target="_blank" title="Stephan Ango">@kepano</a>'s default Obsidian theme and
+            merely adds a few extra things (rather than being an entire, fresh Obsidian Theme). Check it out
+            <a href="https://github.com/v2keener/gdlf-overlay" target="_blank">on Github</a>.
+            <ul>
+              <li>Sidebar: My CV is exported to PDF with Obsidian using my custom Overlay theme and a
+                <code>media-print.css</code>
+                Snippet I created to make it print nicely. (CV available upon request. <em>LinkedIn is the best way to
+                  contact me.)</em>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b><em>Delafuerza Print</em> OpenType font project:</b> <span class="gdlf-print">This text is in "Delafuerza
+              Print",
+              which I created with <a href="https://www.calligraphr.com/en/" target="_blank"
+                title="Visit Calligraphr's website">Calligraphr</a>, <a href="https://inkscape.org/" target="_blank"
+                title="visit Inkscape's website">Inkscape</a>, and
+              a Wacom tablet. Here's how that worked:</span>
+            <ul>
+              <li><b>Calligraphr</b> was used to
+                <ul>
+                  <li>a) download PDF templates to fill out with Inkscape, and</li>
+                  <li>b) upload those hand-written PDFs for Calligraphr to parse them into the
+                    <b>Delafuerza Print</b> font.
+                  </li>
+                </ul>
+              </li>
+              <li><b>Inkscape</b> was used with a Wacom writing tablet to fill in PDF templates for Calligraphr.</li>
+            </ul>
           </li>
         </ul>
-      </li>
-      <li><b>Inkscape</b> was used with a Wacom writing tablet to fill in PDF templates for Calligraphr.</li>
-    </ul>
-  </li>
-</ul>
-<!-- END PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
-<!-- example of adding a part - for it to work, /parts/fooboo.part.html needs to exist -->
-      <!--FOOBOO.PART-->
+        <!-- END PROJECTS.PART part included automatically DO NOT EDIT in index.html -->
+        <!-- example of adding a part - for it to work, /parts/fooboo.part.html needs to exist -->
+        <!--FOOBOO.PART-->
       </div>
     </div>
     <hr>
+    <div class="smoll">
+      <b>Social Media:</b>
+      <ul>
+        <li>LinkedIn - <a href="https://www.linkedin.com/in/gustavodelafuerza/" target="_blank">Gustavo (Keener)
+            DeLaFuerza</a></li>
+        <li>Tumblr - <a href="https://www.tumblr.com/vidadelafuerza" target="_blank">Deviled Tech (blog)</a></li>
+        <li>Mastodon via <a href="https://hachyderm.io/explore" target="_blank">Hachderm.io</a> - <a
+            href="https://hachyderm.io/@gdlf" target="_blank">Gustavo 👾🌈🎯🎉 (@gdlf@hachyderm.io)</a></li>
+      </ul>
+      <hr>
+    </div>
     <footer style="text-align: center;">
       ©️ 2022-2024 Gustavo DeLaFuerza, All Rights Reserved.<br><br>
       Domain from <a href="https://domains.google/" target="_blank">Google Domains</a><br>
       Hosted with <a href="https://www.digitalocean.com/">DigitalOcean</a><br>
-      Hand-coded by Gustavo DeLaFuerza<br>
+      Hand-coded by Gustavo DeLaFuerza starting from a DigitalOcean git repo<br>
       <br>
       <em>(This page is designed for compatibility with screen readers and other assistive technology, please email me
         at v2keener -at- gmail -dot- com if you are differently abled and have any trouble whatsoever accessing this
@@ -206,23 +213,5 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
