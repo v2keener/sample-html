@@ -1,0 +1,5 @@
+User-Agent: * 
+Disallow: /.etc/
+
+User-Agent: * 
+Disallow: /.do/
